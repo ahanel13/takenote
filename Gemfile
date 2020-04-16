@@ -5,7 +5,6 @@ ruby '2.7.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
-
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -43,8 +42,13 @@ group :development do
   gem 'sqlite3', '~> 1.4'
 end
 
+#adding production group that will execute when heroku serves the app
+group :production do 
+     gem 'pg'
+     gem 'rails_12factor'
+end
+
 group :test do
-  gem 'pg'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
