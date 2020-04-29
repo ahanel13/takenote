@@ -16,6 +16,56 @@
 
  @import "bootstrap/scss/bootstrap";
 
+/* Overall Style */
+
+nav a:hover { 
+	background: none;
+}
+nav ul a:hover { 
+	color: #00AAFF !important; 
+	background: none;
+}
+.button1 {
+	margin: 0;
+	color: #00AAFF;
+	background: none;
+	border: 1px solid #00AAFF;
+	border-radius: 5px;
+}
+.button2 {
+	color: white;
+	background: #00AAFF;
+	border: 1px solid #00AAFF;
+	border-radius: 5px;
+}
+.button3 {
+	color: white;
+	background: none;
+	border: 1px solid white;
+	border-radius: 5px;
+}
+.button1:hover {
+	background-color: #0099E6;
+	border: 1px solid #0099E6;
+	color: white;
+}
+.button2:hover {
+	background-color: #007FBF;
+	border: 1px solid #007FBF;
+	color: white;
+}
+.button3:hover {
+	background-color: #0099E6;
+	border: 1px solid #0099E6;
+	color: white;
+}
+.row {
+	padding-bottom: 50px;
+}
+
+ 
+/* Home Page Style */
+
  #hero-image {
 	background-image: url("takenote.jpg");
 	height: 110vh;
@@ -57,33 +107,24 @@ img {
 	height: 200px;
 	width: auto;
 }
-nav a:hover { 
-	background: none;
+.space {
+	padding-top: 30px;
 }
-nav ul a:hover { 
-	color: #00AAFF !important; 
-	background: none;
+.space button {
+	padding-left: 10px;
+	padding-right: 10px;
 }
-.button1 {
-	margin: 0;
-	color: #00AAFF;
-	background: none;
-	border: 1px solid #00AAFF;
+.space .button3 {
+	margin-left: 10px;
+}
+.search {
+	padding: 20px;
 	border-radius: 5px;
+	justify-content: center;
+	background: rgba(196, 196, 196, 0.2);
+	margin-bottom: 20px;
 }
-.button2 {
-	color: white;
-	background: #00AAFF;
-	border: 1px solid #00AAFF;
-	border-radius: 5px;
-}
-.button1:hover {
-	background-color: #0099E6;
-	border: 1px solid #0099E6;
-	color: white;
-}
-.button2:hover {
-	background-color: #007FBF;
-	border: 1px solid #007FBF;
-	color: white;
+#find-class {
+	padding-top: 50px;
+	margin-bottom: -25px;
 }
