@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
-    confirmations: 'confirmations'
-  }
+  devise_for :users, module: "users", controllers: { sessions: 'users/sessions' }
   root 'home#index'
+
   resources :dashboard, only: [:index]
   resources :users
   resources :courses
