@@ -25,6 +25,14 @@ nav ul a:hover {
 	color: #00AAFF !important; 
 	background: none;
 }
+.footer {
+	margin-top: 100px;
+	padding-top: 75px;
+	padding-bottom: 75px;
+	text-align: center;
+	color: white;
+	background: linear-gradient(180deg, #007FBF -80.35%, #0099E6 86.22%, #00AAFF 151.07%);
+}
 .button1 {
 	margin: 0;
 	color: #00AAFF;
@@ -61,6 +69,8 @@ nav ul a:hover {
 }
 .row {
 	padding-bottom: 50px;
+	margin-left: 25px;
+	margin-right: 25px;
 }
 
  
@@ -70,7 +80,7 @@ nav ul a:hover {
 	background-image: url("takenote.jpg");
 	height: 110vh;
 	width: 100%;
-	box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);
+	box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
 	background-position: center;
 	display: flex;
 	text-align: center;
@@ -104,7 +114,7 @@ img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	height: 200px;
+	height: 250px;
 	width: auto;
 }
 .space {
@@ -125,6 +135,10 @@ img {
 	margin-bottom: 20px;
 }
 #find-class {
-	padding-top: 50px;
+	padding-top: 100px;
 	margin-bottom: -25px;
+}
+.row-space {
+	padding-top: 50px;
+	margin-bottom: 50px;
 }
