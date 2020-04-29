@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  topic: MyString
+  title: MyString
+  date_taken: 2020-04-28
+  key_take_aways: MyString
+  users: one
+  courses: one
+
+two:
+  topic: MyString
+  title: MyString
+  date_taken: 2020-04-28
+  key_take_aways: MyString
+  users: two
+  courses: two
