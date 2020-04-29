@@ -37,3 +37,4 @@ yarn-debug.log*
 
 Gemfile.lock
 .DS_Store
+sendgrid.env
