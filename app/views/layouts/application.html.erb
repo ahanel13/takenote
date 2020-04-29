@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+      .event{
+        background-color: lightgray;
+        color: black;
+      }
+    </style>
     <title>Take Note</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -62,12 +68,12 @@
     </header>
       <% flash.each do |type, message| %>
         <% if type == "alert" %>
-          <div class="bg-red-500">
+          <div class="event">
             <div class="container px-2 mx-auto py-4 text-white text-center font-medium font-sans"><%= message %></div>
           </div>
         <% end %>
         <% if type == "notice" %>
-          <div class="bg-green-500">
+          <div class="event">
             <div class="container px-2 mx-auto py-4 text-white text-center font-medium font-sans"><%= message %></div>
           </div>
         <% end %>
