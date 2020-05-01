@@ -6,11 +6,78 @@
     </head>
     <body>
         <section>
+        <header>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">Take Note</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+              </ul>
+            <span class="navbar-text">
+              <button class="button1">Sign In</button>
+              <button class="button2">Sign Up</button>
+            </span>
+          </div>
+</nav>
+        </header>
+      <section id="hero-image"> 
+          <div class="container-fluid">
             <h1>Take Note</h1>
-            <p>Find me in app/views/home/index.html.erb</p>
-        </section>
+            <h3>Notes for students, by students</h3>
+            <p>Take Note is a collaborative platform for students to take, view, and share notes with eachother.</p>
+            <div class="space">
+              <button class="button2">Sign Up</button>
+              <button class="button3">Sign In</button>
+            </div>
+          </div>
+      </section>
+      <div class="container">
+          <div class="row">
+              <h2 id="find-class" class="mx-auto">Find your class.</h2>
+          </div>
+          <div class="row">
+              <div class="search mx-auto">
+                <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button type="submit" class="button2">Search</button>
+               </form>
+            </div>
+          </div>
+          <div class="row row-space">
+              <div class="col-md">
+                  <h3>Take notes</h3>
+                  <p>Taking notes on Take Note is a seamless and innovative experience. Our note-taking environment includes all of the features you expect from a note-taking service, and more! Don’t want to take notes within Take Note itself? No problem! Simply upload your own notes.</p>
+                  <p>With our signature Take Notice feature, defining the most important parts of your notes has never been easier. Take Notice allows you to highlight what you believe to be the most important aspects of your notes, and make comments throughout the document so it will be easier to digest for both yourself, and others.</p>
+              </div>
+              <div class="col-md">
+                  <%= image_tag "take-notes.jpg" %>
+              </div>
+          </div>
+          <div class="row row-space">
+              <div class="col-md">
+                <%= image_tag "view-notes.jpg" %>
+              </div>
+              <div class="col-md">
+                <h3>View notes</h3>
+                <p>Take Note allows you to view your own notes, as well as others’. Viewing notes with Take Note is a unique and innovative experience. The Take Notice feature allows you to easily recall what you felt was most important about notes that you took, and allows you to view what other students felt was most important in theirs.</p>
+                <p>Finding notes is also a seamless experience --  simply find the class that you want notes for, and view notes from other students who are in the same class.</p>
+              </div>
+          </div>
+
+
+      </div><!-- End of Container -->
         <footer>
-            Some Footer
+            <div class="footer">
+              <h3>Take Note</h3>
+            </div>
         </footer>
     </body>
 </html>
