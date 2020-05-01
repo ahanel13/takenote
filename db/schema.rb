@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_28_210236) do
+ActiveRecord::Schema.define(version: 2020_05_01_205346) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -55,9 +55,10 @@ ActiveRecord::Schema.define(version: 2020_04_28_210236) do
     t.string "topic"
     t.string "title"
     t.date "date_taken"
-    t.string "key_take_aways"
-    t.integer "users_id", null: false
-    t.integer "courses_id", null: false
+    t.string "key_takeaways"
+    t.integer "users_id"
+    t.integer "courses_id"
+    t.text "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["courses_id"], name: "index_notes_on_courses_id"
@@ -75,6 +76,4 @@ ActiveRecord::Schema.define(version: 2020_04_28_210236) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "notes", "courses", column: "courses_id"
-  add_foreign_key "notes", "users", column: "users_id"
 end

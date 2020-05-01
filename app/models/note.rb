@@ -1,4 +1,3 @@
 class Note < ApplicationRecord
-  belongs_to :users
-  belongs_to :courses
+    has_rich_text :text
 end
