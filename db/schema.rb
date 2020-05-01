@@ -65,15 +65,5 @@ ActiveRecord::Schema.define(version: 2020_05_01_205346) do
     t.index ["users_id"], name: "index_notes_on_users_id"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email"
-    t.string "school"
-    t.string "password"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
 end
