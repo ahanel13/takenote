@@ -1,4 +1,11 @@
-<h2>Log in</h2>
+<div class="container container-2">
+<div class="row row-2">
+<div class="col background-style2">
+      <h1>Take Note</h1>
+      <p>Notes for students, by students.</p>
+  </div>
+  <div class="col-8 form-spacing">
+<h2>Sign In</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -19,8 +26,11 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Sign in", class: "btn button2" %>
   </div>
 <% end %>
 
 <%= render "users/shared/links" %>
+</div>
+</div>
+</div>
