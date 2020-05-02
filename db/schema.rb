@@ -70,6 +70,8 @@ ActiveRecord::Schema.define(version: 2020_05_01_225933) do
     t.string "last_name"
     t.string "school"
     t.string "username"
+    t.integer "courses_id"
+    t.integer "notes_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "email", default: "", null: false
@@ -77,7 +79,9 @@ ActiveRecord::Schema.define(version: 2020_05_01_225933) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.index ["courses_id"], name: "index_users_on_courses_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["notes_id"], name: "index_users_on_notes_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["username"], name: "index_users_on_username"
   end
