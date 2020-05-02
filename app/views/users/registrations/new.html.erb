@@ -3,23 +3,23 @@
     <div class="col-8 form-style">
 <% content_for :devise_form do %>
 
-  <h2 class="heading text-4xl font-bold pt-4 mb-8">Sign up</h2>
+  <h2 class="heading text-4xl font-bold pt-4 mb-8">Sign Up</h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="form-group">
-      <%= f.label :username, class:"label" %>
+      <%= f.label :username, class:"label" %><br />
       <%= f.text_field :username, autofocus: true, class:"input" %>
     </div>
 
     <div class="form-group">
-      <%= f.label :email, class:"label" %>
+      <%= f.label :email, class:"label" %><br />
       <%= f.email_field :email, autocomplete: "email", class:"input" %>
     </div>
 
     <div class="form-group">
-      <%= f.label :school, class:"label" %>
+      <%= f.label :school, class:"label" %><br />
       <%= f.text_field :school, class:"input" %>
     </div>
 
@@ -34,7 +34,7 @@
     </div>
 
     <div class="form-group">
-      <%= f.label :password_confirmation, class:"label" %>
+      <%= f.label :password_confirmation, class:"label" %><br />
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input" %>
     </div>
 
@@ -45,9 +45,6 @@
     <hr class="mt-6" />
 
   <% end %>
-  <div class="links">
-  <%= render "users/shared/links"%>
-</div>
 
 <% end %>
 
@@ -57,6 +54,9 @@
 <div class="col background-style">
       <h1>Take Note</h1>
       <p>Notes for students, by students.</p>
+      <div class="links-2">
+  <%= render "users/shared/links"%>
+</div>
   </div>
 </div>
 </div>
