@@ -46,16 +46,9 @@ img {
 .space {
 	padding-top: 30px;
 }
-.space button {
-	padding-left: 10px;
-	padding-right: 10px;
-}
-.space .button3 {
-	margin-left: 10px;
-}
 .search {
 	padding: 20px;
-	border-radius: 5px;
+	border-radius: 10px;
 	justify-content: center;
 	background: rgba(196, 196, 196, 0.2);
 	margin-bottom: 20px;
@@ -67,4 +60,25 @@ img {
 .row-space {
 	padding-top: 50px;
 	margin-bottom: 50px;
+}
+.button2 {
+	color: white !important;
+	background: #00AAFF;
+	border: 1px solid #00AAFF;
+	border-radius: 5px;
+}
+.button2:hover {
+	background-color: #007FBF;
+	border: 1px solid #007FBF;
+	color: white;
+}
+.button1 {
+	margin: 0;
+	color: #00AAFF !important;
+	background: none;
+	border: none;
+	border-radius: 5px;
+}
+.button1:hover {
+	color: #007FBF !important;
 }
