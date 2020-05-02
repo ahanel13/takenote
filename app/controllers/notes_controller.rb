@@ -1,5 +1,6 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :update, :destroy]
 
   # GET /notes
   # GET /notes.json
@@ -13,7 +14,6 @@ class NotesController < ApplicationController
   end
 
   # GET /notes/new
-  before_action :authenticate_user!
   def new
     @note = Note.new
     @note.users_id = current_user.id
