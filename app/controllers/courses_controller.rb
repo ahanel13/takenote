@@ -11,7 +11,6 @@ class CoursesController < ApplicationController
   # GET /courses/1
   # GET /courses/1.json
   def show
-    @schools
   end
 
   # GET /courses/new
@@ -71,6 +70,6 @@ class CoursesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def course_params
-      params.require(:course).permit(:dept, :course_number, :name)
+      params.require(:course).permit(:dept, :course_number, :name, :school)
     end
 end
