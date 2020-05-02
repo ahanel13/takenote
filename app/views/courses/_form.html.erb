@@ -26,12 +26,12 @@
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="mb-6">
+    <%= form.select :school, School.all.pluck(:name, :id) %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
+    
   </div>
 <% end %>
