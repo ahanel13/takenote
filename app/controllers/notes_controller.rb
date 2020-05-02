@@ -16,6 +16,7 @@ class NotesController < ApplicationController
   before_action :authenticate_user!
   def new
     @note = Note.new
+    @note.users_id = current_user.id
   end
 
   # GET /notes/1/edit
