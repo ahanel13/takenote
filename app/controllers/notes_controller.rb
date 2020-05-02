@@ -13,6 +13,7 @@ class NotesController < ApplicationController
   end
 
   # GET /notes/new
+  before_action :authenticate_user!
   def new
     @note = Note.new
   end
