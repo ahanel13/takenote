@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'about/index'
   resources :notes
   devise_for :users, module: "users", controllers: { sessions: 'users/sessions' }
   root 'home#index'
