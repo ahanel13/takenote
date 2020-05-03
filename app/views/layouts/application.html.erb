@@ -32,9 +32,8 @@
           </ul>
         <span class="navbar-text">
           <% if user_signed_in? %>
-            <button class="button1">Sign In</button>
-            <a class="btn button1 btn-sm" href="/users/edit" role="button">Edit Profile</a>
-            <a class="btn btn-light btn-sm" data-method="delete" href="/users/sign_out" role="button">Sign Out</a>
+            <a class="btn btn-light btn-sm" href="/users/edit" role="button">Edit Profile</a>
+            <a class="btn btn-primary btn-sm" data-method="delete" href="/users/sign_out" role="button">Sign Out</a>
           <% else %>
             <a class="btn button1 btn-sm" role="button" href="/users/sign_in">Sign In</a>
             <a class="btn button2 btn-sm" role="button" href="/users/sign_up">Sign Up</a>

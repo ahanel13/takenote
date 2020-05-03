@@ -3,15 +3,17 @@
 one:
   topic: MyString
   title: MyString
-  date_taken: 2020-04-28
-  key_take_aways: MyString
-  users: one
-  courses: one
+  date_taken: 2020-05-01
+  key_takeaways: MyString
+  users: 
+  courses: 
+  text: MyText
 
 two:
   topic: MyString
   title: MyString
-  date_taken: 2020-04-28
-  key_take_aways: MyString
-  users: two
-  courses: two
+  date_taken: 2020-05-01
+  key_takeaways: MyString
+  users: 
+  courses: 
+  text: MyText
