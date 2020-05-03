@@ -20,7 +20,7 @@
 
     <div class="form-group">
       <%= f.label :school, class:"label" %><br />
-      <%= f.text_field :school, class: "input field-box" %>
+      <%= f.select :school, School.all.pluck(:name, :id) %>
     </div>
 
     <div class="form-group">
