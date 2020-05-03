@@ -23,9 +23,11 @@
 #profile_button {
 	margin-top: 100px;
 	margin-left: 50px;
+	font-size: 20px;
 }
 #classes_button {
 	margin-left: 50px;
+	font-size: 20px;
 }
 #profile_button:hover {
 	color: rgba(255,255,255,0.6);
@@ -34,4 +36,15 @@
 #classes_button:hover {
 	color: rgba(255,255,255,0.6);
 	cursor: pointer;
+}
+.button2 {
+	color: white;
+	background: #00AAFF;
+	border: 1px solid #00AAFF;
+	border-radius: 5px;
+}
+.button2:hover {
+	background-color: #007FBF;
+	border: 1px solid #007FBF;
+	color: white;
 }
