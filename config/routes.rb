@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :schools
+  resources :notes
   devise_for :users, module: "users", controllers: { sessions: 'users/sessions' }
   root 'home#index'
 

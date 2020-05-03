@@ -1,5 +1,6 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :update, :destroy]
 
   # GET /courses
   # GET /courses.json
@@ -15,6 +16,10 @@ class CoursesController < ApplicationController
   # GET /courses/new
   def new
     @course = Course.new
+    puts current_user.school
+    @school_id = School.where(:id == current_user.school).limit(1)
+    puts(@school_id.ids)
+    @course.schools_id = @school_id.ids
   end
 
   # GET /courses/1/edit
@@ -25,6 +30,16 @@ class CoursesController < ApplicationController
   # POST /courses.json
   def create
     @course = Course.new(course_params)
+    @school = School.find_by(id: @course.schools_id)
+    
+    
+    if @school.try(:courses_id)
+      @school.courses_id = @course.id
+    else
+      @school.courses_id.push(@course.id)
+    end
+
+    @school.save
 
     respond_to do |format|
       if @course.save
@@ -69,6 +84,6 @@ class CoursesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def course_params
-      params.require(:course).permit(:dept, :course_number, :name)
+      params.require(:course).permit(:dept, :course_number, :name, :school)
     end
 end

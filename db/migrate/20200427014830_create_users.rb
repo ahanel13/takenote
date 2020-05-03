@@ -5,6 +5,8 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :last_name
       t.string :school
       t.string :username
+      t.references :courses
+      t.references :notes
 
       t.timestamps
     end

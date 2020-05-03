@@ -1,0 +1,47 @@
+<%= form_with(model: note, local: true) do |form| %>
+  <% if note.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(note.errors.count, "error") %> prohibited this note from being saved:</h2>
+
+      <ul>
+        <% note.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :topic %>
+    <%= form.text_field :topic %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_taken %>
+    <%= form.date_select :date_taken %>
+  </div>
+
+  <div class="field">
+    <%= form.label :key_takeaways %>
+    <%= form.text_field :key_takeaways %>
+  </div>
+
+  <div class="field">
+    <%= form.label :courses %>
+    <%= form.text_field :courses %>
+  </div>
+
+  <div class="field">
+    <%= form.label :text %>
+    <%= form.rich_text_area :text %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
