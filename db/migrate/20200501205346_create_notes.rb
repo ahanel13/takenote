@@ -4,9 +4,10 @@ class CreateNotes < ActiveRecord::Migration[6.0]
       t.string :topic
       t.string :title
       t.date :date_taken
-      t.string :key_take_aways
-      t.references :users, null: false, foreign_key: true
-      t.references :courses, null: false, foreign_key: true
+      t.string :key_takeaways
+      t.references :users
+      t.references :courses
+      t.text :text
 
       t.timestamps
     end

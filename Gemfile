@@ -51,8 +51,8 @@ end
 
 #adding production group that will execute when heroku serves the app
 group :production do 
-     gem 'pg'
-     gem 'rails_12factor'
+    gem 'pg', '~> 1.2', '>= 1.2.3'
+    gem 'rails_12factor'
 end
 
 group :test do
