@@ -15,6 +15,7 @@ class SchoolsController < ApplicationController
   # GET /schools/new
   def new
     @school = School.new
+    @school.courses_id = []
   end
 
   # GET /schools/1/edit
@@ -24,7 +25,12 @@ class SchoolsController < ApplicationController
   # POST /schools
   # POST /schools.json
   def create
-    @school = School.new(school_params)
+    @params = school_params
+    @params.courses_id = []
+    puts(@params)
+
+    # @params.courses_id = []
+    @school = School.new(@params)
 
     respond_to do |format|
       if @school.save
@@ -69,6 +75,6 @@ class SchoolsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def school_params
-      params.require(:school).permit(:name, :courses)
+      params.require(:school).permit(:name, :courses_id)
     end
 end
