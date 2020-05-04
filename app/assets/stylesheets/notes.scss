@@ -1,3 +1,35 @@
 // Place all the styles related to the Notes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.button3 {
+	color: white !important;
+	background: #00AAFF;
+	border-radius: 5px;
+	padding: 5px;
+}
+.button3:hover {
+	background-color: #007FBF;
+	color: white;
+	text-decoration: none !important;
+}
+.button4 {
+	background: rgba(196,196,196, 0.3);
+	border-radius: 5px;
+	margin-left: 5px;
+	padding: 5px;
+}
+.button4:hover {
+	background-color: rgba(196,196,196, 0.4);
+	color: #727272 !important;
+	text-decoration: none !important;
+}
+.takenotice {
+	background: rgba(196,196,196, 0.5);
+	padding: 10px;
+}
+.takenotice h6 {
+	color: #727272;
+}
+.notes {
+	margin-left: 20px;
+}
