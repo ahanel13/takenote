@@ -27,9 +27,8 @@
     <%= f.text_field :last_name, class:"input" %>
   </div>
   
-  <div class="field">
-    <%= f.label :school, class:"label" %>
-    <%= f.text_field :school, class:"input" %>
+  <div class="mb-6">
+    <%= f.select :school_id, School.all.pluck(:name, :id) %>
   </div>
 
   <div class="field">
