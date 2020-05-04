@@ -15,10 +15,13 @@
 	text-align: center;
 }
 #myprofile {
+	display: block;
+}
+#mynotes {
 	display: none;
 }
 #myclasses {
-	display: block;
+	display: none;
 }
 #profile_button {
 	margin-top: 100px;
@@ -29,11 +32,19 @@
 	margin-left: 50px;
 	font-size: 20px;
 }
+#notes_button {
+	margin-left: 50px;
+	font-size: 20px;
+}
 #profile_button:hover {
 	color: rgba(255,255,255,0.6);
 	cursor: pointer;
 }
 #classes_button:hover {
+	color: rgba(255,255,255,0.6);
+	cursor: pointer;
+}
+#notes_button:hover {
 	color: rgba(255,255,255,0.6);
 	cursor: pointer;
 }

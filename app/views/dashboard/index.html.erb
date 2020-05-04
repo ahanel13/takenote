@@ -1,20 +1,28 @@
 <div class="container container-2">
 <div class="row row-2">
 <div class="col-sm-4 background-style3">
-		<h1>Username</h1>
+		<h1><%= current_user.username %></h1>
 
 		<p id="profile_button">My Profile</p>
 		<p id="classes_button">My Classes</p>
+		<p id="notes_button">My Notes</p>
   </div>
   <div class="col-sm-8 form-spacing">
  <div id="myclasses">
 <h2>My Classes</h2>
-<p>List of their classes</p>
+<p>List of Classes</p>
 </div>
 <div id="myprofile">
 <h2>My Profile</h2>
-<p>List of their profile and the option to change it</p>
+<p><%= current_user.email %></p>
+<p><%= current_user.username %></p>
+<p><%= current_user.school %></p>
 <a class="btn button2 btn-sm" href="/users/edit" role="button">Edit Profile</a>
+</div>
+<div id="mynotes">
+<h2>My Notes</h2>
+<p>List of notes</p>
+<a class="btn button2 btn-sm" href="/notes/new" role="button">Create Notes</a>
 </div>
 </div>
 </div>
@@ -24,10 +32,18 @@
 	function profile() {
 		document.getElementById('myprofile').style.display="block";
 		document.getElementById('myclasses').style.display="none";
+		document.getElementById('mynotes').style.display="none";
 	};
 	document.getElementById("classes_button").addEventListener("click", classes);
 	function classes() {
 		document.getElementById('myclasses').style.display="block";
 		document.getElementById('myprofile').style.display="none";
-	}
+		document.getElementById('mynotes').style.display="none";
+	};
+	document.getElementById("notes_button").addEventListener("click", notes);
+	function notes() {
+		document.getElementById('myprofile').style.display="none";
+		document.getElementById('myclasses').style.display="none";
+		document.getElementById('mynotes').style.display="block";
+	};
 </script>
