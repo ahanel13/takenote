@@ -1,3 +1,3 @@
 class Course < ApplicationRecord
-    belongs_to :school
+    belongs_to :school, foreign_key: :school_id
 end
