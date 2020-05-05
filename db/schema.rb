@@ -47,10 +47,10 @@ ActiveRecord::Schema.define(version: 2020_05_02_180050) do
     t.string "dept"
     t.integer "course_number"
     t.string "name"
-    t.integer "school_id"
+    t.integer "schools_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["school_id"], name: "index_courses_on_school_id"
+    t.index ["schools_id"], name: "index_courses_on_schools_id"
   end
 
   create_table "notes", force: :cascade do |t|
