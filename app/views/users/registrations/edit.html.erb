@@ -31,10 +31,10 @@
     <%= f.text_field :last_name, class: "input field-box" %>
   </div>
   
-  <div class="field">
-    <%= f.label :school, class:"label" %><br />
-    <%= f.select :school_id, School.all.pluck(:name, :id) %>
-  </div>
+  <div class="form-group">
+      <%= f.label :school, class:"label" %><br />
+      <%= f.select :school, School.all.pluck(:name, :id) %>
+    </div>
 
   <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
