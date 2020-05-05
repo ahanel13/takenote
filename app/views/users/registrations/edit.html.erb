@@ -33,7 +33,7 @@
   
   <div class="field">
     <%= f.label :school, class:"label" %><br />
-    <%= f.text_field :school, class: "input field-box" %>
+    <%= f.select :school_id, School.all.pluck(:name, :id) %>
   </div>
 
   <div class="field">
