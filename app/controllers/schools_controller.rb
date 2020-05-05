@@ -27,12 +27,7 @@ class SchoolsController < ApplicationController
   # POST /schools
   # POST /schools.json
   def create
-    @params = school_params
-    @params.courses_id = []
-    puts(@params)
-
-    # @params.courses_id = []
-    @school = School.new(@params)
+    @school = School.new(school_params)
 
     respond_to do |format|
       if @school.save
