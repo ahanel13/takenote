@@ -33,7 +33,7 @@
   
   <div class="form-group">
       <%= f.label :school, class:"label" %><br />
-      <%= f.select :school, School.all.pluck(:name, :id) %>
+      <%= f.select :school_id, School.all.pluck(:name, :id) %>
     </div>
 
   <div class="field">

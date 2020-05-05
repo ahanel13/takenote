@@ -1,3 +1,4 @@
+
 <%= form_with(model: note, local: true) do |form| %>
   <% if note.errors.any? %>
     <div id="error_explanation">
@@ -12,13 +13,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :topic %>
-    <%= form.text_field :topic %>
+    <%= form.label :topic %><br />
+    <%= form.text_field :topic, class: "field-box" %>
   </div>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.label :title %><br />
+    <%= form.text_field :title, class: "field-box"  %>
   </div>
 
   <div class="field">
@@ -27,13 +28,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :key_takeaways %>
-    <%= form.text_field :key_takeaways %>
+    <%= form.label :key_takeaways %><br />
+    <%= form.text_field :key_takeaways, class: "field-box"  %>
   </div>
 
   <div class="field">
-    <%= form.label :courses %>
-    <%= form.text_field :courses %>
+    <%= form.label :courses %><br />
+    <%= form.text_field :courses, class: "field-box"  %>
   </div>
 
   <div class="field">
@@ -42,6 +43,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Create Note", class: "button2" %>
   </div>
 <% end %>
