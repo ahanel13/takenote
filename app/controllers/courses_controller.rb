@@ -16,10 +16,7 @@ class CoursesController < ApplicationController
   # GET /courses/new
   def new
     @course = Course.new
-    puts current_user.school
-    @school_id = School.where(:id == current_user.school).limit(1)
-    puts(@school_id.ids)
-    @course.schools_id = @school_id.ids
+
   end
 
   # GET /courses/1/edit
@@ -29,18 +26,15 @@ class CoursesController < ApplicationController
   # POST /courses
   # POST /courses.json
   def create
-    @course = Course.new(course_params)
-    @school = School.find_by(id: @course.schools_id)
-    
-    
-    if @school.try(:courses_id)
-      @school.courses_id = @course.id
-    else
-      @school.courses_id.push(@course.id)
-    end
+    #finding school based on signed in user
+    @school = School.find(current_user.school_id)
 
-    @school.save
-
+    #creating new courses entity
+    @course = @school.courses.create(course_params)
+    
+    @course.school_id = @school.id
+    puts(@course.school_id)
+    
     respond_to do |format|
       if @course.save
         format.html { redirect_to @course, notice: 'Course was successfully created.' }
@@ -84,6 +78,6 @@ class CoursesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def course_params
-      params.require(:course).permit(:dept, :course_number, :name, :school)
+      params.require(:course).permit(:dept, :course_number, :name, :school_id)
     end
 end

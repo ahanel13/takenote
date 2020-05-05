@@ -10,6 +10,8 @@ class SchoolsController < ApplicationController
   # GET /schools/1
   # GET /schools/1.json
   def show
+    @courses = School.find(params[:id]).courses
+    puts(@courses.length)
   end
 
   # GET /schools/new
@@ -25,12 +27,7 @@ class SchoolsController < ApplicationController
   # POST /schools
   # POST /schools.json
   def create
-    @params = school_params
-    @params.courses_id = []
-    puts(@params)
-
-    # @params.courses_id = []
-    @school = School.new(@params)
+    @school = School.new(school_params)
 
     respond_to do |format|
       if @school.save

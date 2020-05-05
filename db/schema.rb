@@ -47,10 +47,10 @@ ActiveRecord::Schema.define(version: 2020_05_02_180050) do
     t.string "dept"
     t.integer "course_number"
     t.string "name"
-    t.integer "schools_id"
+    t.integer "school_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["schools_id"], name: "index_courses_on_schools_id"
+    t.index ["school_id"], name: "index_courses_on_school_id"
   end
 
   create_table "notes", force: :cascade do |t|
@@ -78,10 +78,10 @@ ActiveRecord::Schema.define(version: 2020_05_02_180050) do
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "school"
     t.string "username"
     t.integer "courses_id"
     t.integer "notes_id"
+    t.integer "school_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "email", default: "", null: false
@@ -93,6 +93,7 @@ ActiveRecord::Schema.define(version: 2020_05_02_180050) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["notes_id"], name: "index_users_on_notes_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["school_id"], name: "index_users_on_school_id"
     t.index ["username"], name: "index_users_on_username"
   end
 
