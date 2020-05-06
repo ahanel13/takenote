@@ -21,7 +21,22 @@
 </div>
 <div id="mynotes">
 <h2>My Notes</h2>
-<p>List of notes</p>
+<div class="notes">
+    <% @user_notes.each do |note| %>
+      <tr>
+        <td><%= note.topic %></td>
+        <td><%= note.title %></td>
+        <td><%= note.date_taken %></td>
+        <td><%= note.key_takeaways %></td>
+        <td><%= note.user_id %></td>
+        <td><%= note.course_id %></td>
+        <td><%= note.text %></td>
+        <td><%= link_to 'Show', note %></td>
+        <td><%= link_to 'Edit', edit_note_path(note) %></td>
+        <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+</div>
 <a class="btn button2 btn-sm" href="/notes/new" role="button">Create Notes</a>
 </div>
 </div>
