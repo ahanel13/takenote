@@ -33,11 +33,14 @@ class NotesController < ApplicationController
     @note = Note.new(@params)
     puts(@note.course_id)
 
-    #finding related course
+    #finding and adding note to related course
     @course = Course.find(@note.course_id)
     puts(@course.to_json)
     @course.notes<<(@note)
     puts("updated course:", @course.to_json)
+
+    #add note to related user
+    current_user.notes<<(@note)
 
     respond_to do |format|
       if @note.save
