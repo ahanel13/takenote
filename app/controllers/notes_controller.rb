@@ -16,7 +16,6 @@ class NotesController < ApplicationController
   # GET /notes/new
   def new
     @note = Note.new
-    @note.users_id = current_user.id
   end
 
   # GET /notes/1/edit
@@ -26,7 +25,18 @@ class NotesController < ApplicationController
   # POST /notes
   # POST /notes.json
   def create
-    @note = Note.new(note_params)
+    @params = note_params
+    @params[:user_id] = current_user.id
+    puts(@params.to_json)
+
+    @note = Note.new(@params)
+    puts(@note.course_id)
+
+    @course = Course.find(@note.course_id)
+    puts(@course.to_json)
+
+
+    current_user.notes.build(@params)
 
     respond_to do |format|
       if @note.save
@@ -71,6 +81,6 @@ class NotesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def note_params
-      params.require(:note).permit(:topic, :title, :date_taken, :key_takeaways, :users, :courses, :text)
+      params.require(:note).permit(:topic, :title, :date_taken, :key_takeaways, :course_id, :text)
     end
 end
