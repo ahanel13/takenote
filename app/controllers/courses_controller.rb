@@ -11,6 +11,7 @@ class CoursesController < ApplicationController
   # GET /courses/1
   # GET /courses/1.json
   def show
+    @notes = Course.find(params[:id]).notes
   end
 
   # GET /courses/new

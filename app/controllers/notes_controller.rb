@@ -29,14 +29,15 @@ class NotesController < ApplicationController
     @params[:user_id] = current_user.id
     puts(@params.to_json)
 
+    #creating note object
     @note = Note.new(@params)
     puts(@note.course_id)
 
+    #finding related course
     @course = Course.find(@note.course_id)
     puts(@course.to_json)
-
-
-    current_user.notes.build(@params)
+    @course.notes<<(@note)
+    puts("updated course:", @course.to_json)
 
     respond_to do |format|
       if @note.save
