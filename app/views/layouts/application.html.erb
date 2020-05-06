@@ -27,12 +27,12 @@
               <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about/index">About</a>
+              <a class="nav-link" href="/about/index">About</a>
             </li>
           </ul>
         <span class="navbar-text">
           <% if user_signed_in? %>
-            <a class="btn button1 btn-sm" href="/users/edit" role="button">Edit Profile</a>
+            <a class="btn button1 btn-sm" href="/dashboard" role="button">My Account</a>
             <a class="btn btn-light btn-sm" data-method="delete" href="/users/sign_out" role="button">Sign Out</a>
           <% else %>
             <a class="btn button1 btn-sm" role="button" href="/users/sign_in">Sign In</a>

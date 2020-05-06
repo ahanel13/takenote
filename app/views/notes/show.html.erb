@@ -1,39 +1,17 @@
+<div class="container space">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Topic:</strong>
-  <%= @note.topic %>
-</p>
+  <h2><%= @note.title %></h2>
+  <h4><%= @note.topic %></h4>
+  <p><%= @note.user_id %></p>
+  <p><%= @note.course_id %></p>
+  <p><%= @note.date_taken %></p>
+  <div class="takenotice">
+      <h6>Take Notice</h6>
+      <p><%= @note.key_takeaways %></p>
+  </div>
+  <p><%= @note.text %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @note.title %>
-</p>
-
-<p>
-  <strong>Date taken:</strong>
-  <%= @note.date_taken %>
-</p>
-
-<p>
-  <strong>Key takeaways:</strong>
-  <%= @note.key_takeaways %>
-</p>
-
-<p>
-  <strong>Users:</strong>
-  <%= @note.user_id %>
-</p>
-
-<p>
-  <strong>Courses:</strong>
-  <%= @note.course_id %>
-</p>
-
-<p>
-  <strong>Text:</strong>
-  <%= @note.text %>
-</p>
-
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>
+<%= link_to 'Edit', edit_note_path(@note), class: "btn btn-light btn-sm" %> |
+<%= link_to 'Back', notes_path, class: "btn btn-light btn-sm" %>
+</div>
