@@ -48,8 +48,10 @@ ActiveRecord::Schema.define(version: 2020_05_02_180050) do
     t.integer "course_number"
     t.string "name"
     t.integer "school_id"
+    t.integer "notes_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["notes_id"], name: "index_courses_on_notes_id"
     t.index ["school_id"], name: "index_courses_on_school_id"
   end
 
@@ -58,13 +60,13 @@ ActiveRecord::Schema.define(version: 2020_05_02_180050) do
     t.string "title"
     t.date "date_taken"
     t.string "key_takeaways"
-    t.integer "users_id"
-    t.integer "courses_id"
+    t.integer "user_id"
+    t.integer "course_id"
     t.text "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["courses_id"], name: "index_notes_on_courses_id"
-    t.index ["users_id"], name: "index_notes_on_users_id"
+    t.index ["course_id"], name: "index_notes_on_course_id"
+    t.index ["user_id"], name: "index_notes_on_user_id"
   end
 
   create_table "schools", force: :cascade do |t|

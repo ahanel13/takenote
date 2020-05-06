@@ -5,8 +5,8 @@ class CreateNotes < ActiveRecord::Migration[6.0]
       t.string :title
       t.date :date_taken
       t.string :key_takeaways
-      t.references :users
-      t.references :courses
+      t.references :user
+      t.references :course
       t.text :text
 
       t.timestamps

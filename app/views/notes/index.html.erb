@@ -7,21 +7,18 @@
 </div>
 <div class="notes">
     <% @notes.each do |note| %>
-        <h2><%= note.title %></h2>
-        <h4><%= note.topic %></h4>
-        <p><%= note.date_taken %></p>
-        <p><%= note.users %></p>
-        <p><%= note.courses %></p>
-        <div class="takenotice">
-        <h6>Take Notice</h6>
-        <p><%= note.key_takeaways %></p>
-        </div>
-        <p><%= note.text %></p>
-        <div class="row">
-        <p><%= link_to 'View', note, class: "button3" %></p>
-        <p><%= link_to 'Edit', edit_note_path(note), class: "button4"%></p>
-        <p><%= link_to 'Delete', note, method: :delete, data: { confirm: 'Are you sure?' }, class: "button4" %></p>
-      </div>
+      <tr>
+        <td><%= note.topic %></td>
+        <td><%= note.title %></td>
+        <td><%= note.date_taken %></td>
+        <td><%= note.key_takeaways %></td>
+        <td><%= note.user_id %></td>
+        <td><%= note.course_id %></td>
+        <td><%= note.text %></td>
+        <td><%= link_to 'Show', note %></td>
+        <td><%= link_to 'Edit', edit_note_path(note) %></td>
+        <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
     <% end %>
 </div>
 <div class="row">

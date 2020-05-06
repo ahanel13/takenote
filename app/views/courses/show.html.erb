@@ -15,5 +15,20 @@
   <%= @course.name %>
 </p>
 
+<% if @notes.length %>
+  <ul>
+    <% @notes.each do |note| %>
+      <li>
+        <strong>Notes:</strong>
+          <tr>
+            <td><%= note.topic %></td>
+            <td><%= link_to 'Show', note %></td>
+            <td><%= link_to 'Edit', edit_school_path(note) %></td>
+            <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      </li>
+    <%end%>
+  </ul>
+<%end %>
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
