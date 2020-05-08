@@ -59,3 +59,12 @@
 	border: 1px solid #007FBF;
 	color: white;
 }
+
+.scroll-box {
+	margin: auto;
+	max-height: 650px;
+	max-width: 900px;
+	overflow:auto;
+	font-family:sans-serif;
+	padding:10px;
+}
