@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .background-style2 {
 	background: linear-gradient(180deg, #007FBF 0%, #0099E6 80.73%, #00AAFF 100%);
-	height: 95vh;
+	height: 100%;
 	width: 100%;
 	padding-left: 0 !important;
 	padding-right: 0 !important;
@@ -17,4 +17,36 @@
 .about-spacing {
 	margin-top: 150px;
 	padding-left: 75px !important;
+}
+
+.about-footer {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(180deg, #007FBF -80.35%, #0099E6 86.22%, #00AAFF 151.07%);
+    left: 0;
+}
+
+
+.split {
+	height: 100%;
+	width: 50%;
+	position: fixed;
+	margin-top: 80px;
+	top: 0;
+	overflow-x: hidden;
+}
+
+.left {
+	padding-left: 15px;
+	left: 0;
+	background: linear-gradient(180deg, #007FBF -80.35%, #0099E6 86.22%, #00AAFF 151.07%);
+}
+
+.right {
+	right: 0;
 }
