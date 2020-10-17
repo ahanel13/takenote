@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .background-style2 {
 	background: linear-gradient(180deg, #007FBF 0%, #0099E6 80.73%, #00AAFF 100%);
-	height: 95vh;
+	height: 100%;
 	width: 100%;
 	padding-left: 0 !important;
 	padding-right: 0 !important;
@@ -17,4 +17,91 @@
 .about-spacing {
 	margin-top: 150px;
 	padding-left: 75px !important;
+}
+
+.grid { 
+	display: grid;
+	height: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50rem 45rem;
+    grid-template-areas: 
+    "s1 s2"
+    "s3 s4"
+}
+.s1 { 
+    grid-area: s1;
+}
+.s2 { 
+    grid-area: s2;
+}
+.s3 { 
+	grid-area: s3;
+}
+
+.s4 { 
+    grid-area: s4;
+}
+
+.about-text {
+	text-align: center;
+	margin-top: 3%;
+	margin-right: 6%;
+}
+
+#top-left-column {
+	margin-right: 15%;
+	height: 100%;
+	background: linear-gradient(180deg, #007FBF -80.35%, #0099E6 86.22%, #00AAFF 151.07%);
+}
+
+#bottom-left-column {
+	margin-right: 15%;
+	height: 100%;
+}
+
+#page-container {
+	position: relative;
+	min-height: 100vh;
+}
+
+#about-image {
+	width: 60%;
+	height: auto;
+	margin-top: 10%;
+	margin-right: 20%;
+}
+
+#main-about-header {
+	text-align: center;
+	padding-top: 30%;
+	color:white;
+}
+
+.about-header{
+	text-align: center;
+	padding-top: 25%;
+}
+
+#about-footer {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(180deg, #007FBF -80.35%, #0099E6 86.22%, #00AAFF 151.07%);
+    left: 0;
+}
+
+#who-we-are-text {
+	text-align: center;
+	margin-top: 3%;
+	margin-left: 5%;
+}
+
+#subtitle-text {
+	text-align: center;
+	margin-top: 0%;
+	color: white;
 }
