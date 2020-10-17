@@ -71,7 +71,13 @@
 	margin-right: 20%;
 }
 
-.about-header {
+#main-about-header {
+	text-align: center;
+	padding-top: 30%;
+	color:white;
+}
+
+.about-header{
 	text-align: center;
 	padding-top: 25%;
 }
@@ -96,5 +102,6 @@
 
 #subtitle-text {
 	text-align: center;
-	margin-top: 3%;
+	margin-top: 0%;
+	color: white;
 }
