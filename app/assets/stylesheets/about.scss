@@ -23,30 +23,35 @@
     width: 100%;
     bottom: 0;
     position: fixed;
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: center;
     color: white;
     background: linear-gradient(180deg, #007FBF -80.35%, #0099E6 86.22%, #00AAFF 151.07%);
     left: 0;
 }
 
-
-.split {
+.grid { 
+	display: grid;
 	height: 100%;
-	width: 50%;
-	position: fixed;
-	margin-top: 80px;
-	top: 0;
-	overflow-x: hidden;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100% 100%;
+    grid-template-areas: 
+    "s1 s2"
+    "s3 s4"
 }
-
-.left {
-	padding-left: 15px;
-	left: 0;
-	background: linear-gradient(180deg, #007FBF -80.35%, #0099E6 86.22%, #00AAFF 151.07%);
+.s1 { 
+    grid-area: s1;
+    background: linear-gradient(180deg, #007FBF -80.35%, #0099E6 86.22%, #00AAFF 151.07%);;
 }
-
-.right {
-	right: 0;
+.s2 { 
+    grid-area: s2;
+    background-color: #00FF36;
+}
+.s3 { 
+	grid-area: s3;
+	
+.s4 { 
+    grid-area: s4;
+    background-color: #00FF36;
 }
